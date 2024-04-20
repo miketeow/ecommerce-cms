@@ -17,6 +17,6 @@ Some modifications were made to the original tutorial, including:
 Below is a list of changes made during the development process:
 
 1. Installed `shadcn/ui`.
-2. Integrated Clerk for authentication.
-3. Use Drizzle instead of Prisma.
+2. Setup Drizzle and Docker.
+3. Integrated Clerk for authentication.
 4. Next Theme for dark mode.
