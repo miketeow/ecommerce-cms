@@ -19,4 +19,5 @@ Below is a list of changes made during the development process:
 1. Installed `shadcn/ui`.
 2. Setup Drizzle and Docker.
 3. Integrated Clerk for authentication.
-4. Next Theme for dark mode.
+4. Add modal component.
+   - Might change it to not using zustand to open it using hook.
