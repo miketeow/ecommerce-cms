@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const { name } = body;
 
     if (!userId) {
-      return new NextResponse("Unaauthorized", {
+      return new NextResponse("Unauthorized", {
         status: 401,
       });
     }
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     const newStore = await db
       .insert(store)
       .values({ name, userId })
-      .returning({ name: store.name });
+      .returning();
 
     return NextResponse.json(newStore);
   } catch (error) {

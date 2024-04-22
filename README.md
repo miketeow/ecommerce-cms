@@ -21,3 +21,4 @@ Below is a list of changes made during the development process:
 3. Integrated Clerk for authentication.
 4. Add modal component.
    - Might change it to not using zustand to open it using hook.
+   - Change to open the store modal using a button.

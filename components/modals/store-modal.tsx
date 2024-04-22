@@ -19,6 +19,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
+import { Store } from "@/db/schema";
+
 export const StoreModal = () => {
   const storeModal = useStoreModal();
   const [loading, setLoading] = useState(false);
@@ -34,8 +37,9 @@ export const StoreModal = () => {
       setLoading(true);
 
       await axios.post("/api/stores", data).then((res) => {
-        console.log(res.data[0].name);
         toast.success(`Store ${res.data[0].name} created successfully`);
+
+        window.location.assign(`/${res.data[0].id}`);
       });
     } catch (error) {
       toast.error("Something went wrong");
