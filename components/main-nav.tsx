@@ -12,19 +12,19 @@ const MainNav = ({
   const params = useParams();
   const routes = [
     {
-      href: `/dashboard/${params.storeId}`,
+      href: `/${params.storeId}`,
       label: "Overview",
-      active: pathname === `/dashboard/${params.storeId}`,
+      active: pathname === `/${params.storeId}`,
     },
     {
-      href: `/dashboard/${params.storeId}/billboards`,
+      href: `/${params.storeId}/billboards`,
       label: "Billboards",
-      active: pathname === `/dashboard/${params.storeId}/billboards`,
+      active: pathname === `/${params.storeId}/billboards`,
     },
     {
-      href: `/dashboard/${params.storeId}/settings`,
+      href: `/${params.storeId}/settings`,
       label: "Settings",
-      active: pathname === `/dashboard/${params.storeId}/settings`,
+      active: pathname === `/${params.storeId}/settings`,
     },
   ];
   return (
