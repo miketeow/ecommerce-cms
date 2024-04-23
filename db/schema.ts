@@ -2,7 +2,7 @@ import { pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 
 export const store = pgTable("store", {
   id: uuid("id").defaultRandom().primaryKey().notNull(),
-  name: text("name"),
+  name: text("name").notNull(),
   userId: text("user_id"),
   createdAt: timestamp("created_at", { withTimezone: true })
     .notNull()
